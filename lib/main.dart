@@ -11,7 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int select = 0 ;
+  int select = 0;
   List<Widget> list1 = [
     Text("Page 1 ",
         style: TextStyle(
@@ -62,33 +62,26 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: const Color.fromARGB(255, 82, 17, 204),
         ),
 
-
-        //show the icon in blow of app 
+        //show the icon in blow of app
 
         body: Column(
           children: [
             Container(
               height: 625,
               child: PageView(
-                  controller: PageController(
-                    initialPage: select,
-                  ),
-                  onPageChanged: (index) {
-                    setState(() {
-                      select = index;
-                    });
-                  },
-                  children: list1,
-                  ),
+                controller: PageController(
+                  initialPage: select,
+                ),
+                onPageChanged: (index) {
+                  setState(() {
+                    select = index;
+                  });
+                },
+                children: list1,
+              ),
             )
           ],
         ),
-
-
-
-
-
-        
 
         /*Center(
           child: Image.network(
