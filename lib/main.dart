@@ -4,9 +4,11 @@ import 'package:my_app/Conterprofil.dart';
 import 'package:my_app/Homepage.dart';
 import 'package:my_app/Navigatwidght.dart';
 import 'package:my_app/Settings.dart';
+import 'package:my_app/Provedertask.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(ChangeNotifierProvider(create: (_)=>Provedertask(), child: Myapp(),));
 }
 
 class Myapp extends StatelessWidget {
